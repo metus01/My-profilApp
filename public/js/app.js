@@ -5292,6 +5292,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 __webpack_require__(/*! ./bootstrap.bundle.min */ "./resources/js/bootstrap.bundle.min.js");
+document.addEventListener('livewire:load', function () {
+  Livewire.on('numberUpdated', function (nbUser) {
+    document.querySelector('#print').textContent = nbUser;
+  });
+});
 
 /***/ }),
 
