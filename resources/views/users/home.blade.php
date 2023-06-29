@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+   
     @livewireStyles
 </head>
 <body>
@@ -26,11 +26,11 @@
                         </li>
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
+                            <a class="nav-link" href="{{ route('register')}}">Register</a>
                         </li>
                         @endif
                         @endauth
@@ -91,9 +91,13 @@
                 </button>
               </div>
         </div>
+        <div class="container d-flex justify-content-center align-items-center">
+            <a href="#"  style=" border-radius:7px;width: 100%" class=" mt-3
+              btn   btn-dark">Register</a>
+        </div>
     </main>
     @livewireScripts
-    <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 
 </html>
